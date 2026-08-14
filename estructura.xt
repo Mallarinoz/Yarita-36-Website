@@ -1,0 +1,25 @@
+nombre-de-tu-proyecto/
+│
+├── index.html           # Punto de entrada principal de la web
+├── README.md            # Documentación básica del proyecto (opcional)
+│
+├── assets/              # Archivos estáticos que no son código
+│   ├── images/          # Fotos, ilustraciones (jpg, png, svg)
+│   ├── icons/           # Iconos específicos (favicons, ui icons)
+│   └── fonts/           # Fuentes locales descargadas
+│
+├── css/                 # Todos los estilos
+│   ├── style.css        # Archivo de estilos global principal (une a los demás)
+│   ├── variables.css    # Colores, fuentes, tamaños globales
+│   └── modules/         # Estilos específicos para componentes/secciones
+│       ├── header.css
+│       ├── footer.css
+│       └── hero.css
+│
+└── js/                  # Toda la lógica de comportamientovainilla
+    ├── main.js          # Punto de entrada de JS (une a los módulos)
+    ├── utils.js         # Funciones de ayuda reutilizables (opcional)
+    └── modules/         # Lógica específica para componentes/secciones
+        ├── menu.js
+        ├── slider.js
+        └── gallery.js

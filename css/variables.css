@@ -1,0 +1,24 @@
+/* css/variables.css */
+
+:root {
+    /* --- COLORES --- */
+    --color-fondo-web: #ffffff; /* Blanco puro */
+    --color-negro-brillante: #000000; /* Negro puro */
+    --color-verde-bosque: #1b4332; /* Verde oscuro formal */
+    --color-dorado-tierno: #85581A; /* Dorado suave */
+    --color-dorado-borde: #d4af37; /* Dorado más intenso para marcos */
+    --color-dorado-fondo: #faf4e8; /* Beige muy suave para fondo de badge */
+    --color-separador: #c2d6c6; /* Separador tierno */
+    --color-corazon: #d90429; /* Rojo corazón */
+
+    /* --- FUENTES --- */
+    /* Garamond para formalidad, Great Vibes para tierno */
+    --fuente-principal: 'Cormorant Garamond', 'Georgia', serif;
+    --fuente-tierna: 'Great Vibes', cursive;
+    --fuente-badge: 'Montserrat', sans-serif;
+
+    /* --- TAMAÑOS Y MEDIDAS A4 --- */
+    --ancho-a4: 210mm;
+    --alto-a4: 297mm;
+    --ancho-bosque: 48mm;
+}

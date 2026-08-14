@@ -1,0 +1,145 @@
+/* ========================================================================== */
+/* ESTILOS BASE WEB (Fuera de impresión)                                     */
+/* ========================================================================== */
+
+.page {
+    width: var(--ancho-a4);
+    height: var(--alto-a4);
+    background-color: var(--color-fondo-web);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always; 
+    break-after: page; 
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+    margin: 20px auto; 
+}
+
+/* Bordes del Bosque */
+.forest-border {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--ancho-bosque);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.forest-left {
+    left: 0;
+    background-position: left center;
+    background-image: url('../../assets/images/fondo-bosque.png'); 
+}
+
+.forest-right {
+    right: 0;
+    background-position: right center;
+    background-image: url('../../assets/images/fondo-bosque.png'); 
+}
+
+/* Contenido de Portada */
+.cover-content {
+    position: absolute;
+    left: var(--ancho-bosque);
+    right: var(--ancho-bosque);
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20mm;
+    text-align: center;
+    z-index: 10;
+}
+
+.cover-content .main-title {
+    font-family: var(--fuente-tierna);
+    font-size: 40pt;
+    color: var(--color-verde-bosque);
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+.cover-content .age-badge {
+    display: inline-block;
+    font-family: var(--fuente-badge);
+    font-size: 14pt;
+    font-weight: 600;
+    color: var(--color-dorado-tierno);
+    background: var(--color-dorado-fondo);
+    border: 1px solid var(--color-dorado-borde);
+    padding: 6px 25px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.photo-frame {
+    width: 85mm;
+    height: 110mm;
+    padding: 8px;
+    background: var(--color-fondo-web);
+    border: 2px solid var(--color-dorado-borde);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* ========================================================================== */
+/* UN SOLO BLOQUE DE REGLAS DE IMPRESIÓN (PDF / Ctrl + P)                    */
+/* ========================================================================== */
+
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .page {
+        width: 210mm !important;
+        height: 297mm !important;
+        page-break-after: always !important; 
+        break-after: page !important;
+        position: relative !important;
+        overflow: hidden !important; 
+        margin: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Mantiene el texto perfectamente centrado sin encimarse en los árboles */
+    .inside-content {
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: var(--ancho-bosque) !important;
+        right: var(--ancho-bosque) !important;
+        padding: 20mm 12mm !important;
+        z-index: 10 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+
+    .inside-text p {
+        page-break-inside: avoid !important; 
+        break-inside: avoid !important;      
+    }
+
+    .closing-block {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+}

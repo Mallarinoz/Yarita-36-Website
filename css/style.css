@@ -1,0 +1,6 @@
+/* /css/style.css */
+
+@import 'variables.css';
+@import 'base.css';
+@import 'modules/texto-interno.css';
+@import 'modules/tarjeta.css';
